@@ -1,6 +1,4 @@
-﻿using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 
 namespace Assessment_OUTsurance
 {
