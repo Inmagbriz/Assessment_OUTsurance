@@ -28,7 +28,7 @@ namespace Assessment_OUTsurance
         public string CheckoutButtonLocator = "xpath=//div[@class='checkout-buttons']";
         public string CheckoutAsGuessButtonLocator = "xpath=//input[contains(@class , 'checkout-as-guest-button')]";
         public string InStorePickupCheckLocator = "id=PickUpInStore";
-        public string NextButtonLocator = "xpath=//input[contains(@class, 'next-step-button')]";
+        public string NextButtonLocator = "xpath=//div[@id='{0}-buttons-container']/descendant::input[contains(@class, 'next-step-button')]";
         public string OrderNumberLocator = "xpath=//ul[@class = 'details']/li";
         #endregion
 
@@ -142,11 +142,11 @@ namespace Assessment_OUTsurance
             return false;
         }
 
-        public bool ClickNextButton()
+        public bool ClickNextButtonInSection(string section)
         {
-            if (IsElementVisible(NextButtonLocator, 1))
+            if (IsElementVisible(string.Format(NextButtonLocator, section), 1))
             {
-                FindElement(ByLocator(NextButtonLocator)).Click();
+                FindElement(ByLocator(string.Format(NextButtonLocator, section))).Click();
                 return true;
             }
             return false;

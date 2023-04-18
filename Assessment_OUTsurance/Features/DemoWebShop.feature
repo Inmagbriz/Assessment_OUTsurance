@@ -20,10 +20,10 @@ Scenario: S2 Checkout
 	And the user agrees with the terms of service
 	When the user clicks Checkout button
 	And the user is logged as 'amanda.fields@mail.com' with password 'amandafields'
-	And the user clicks Continue in Billing Address
+	And the user clicks Continue in 'billing' Address
 	And the user selects In-Store Pickup
-	And the user clicks Continue in Shipping Address
-	And the user clicks Continue in Payment Method
-	And the user clicks Continue in Payment Information
-	And the user confirms order
-	Then the user gets the message an Order number
+	And the user clicks Continue in 'shipping' Address
+	And the user clicks Continue in 'payment-method'
+	And the user clicks Continue in 'payment-info'
+	And the user clicks in 'confirm-order'
+	Then the user gets the message with an Order number

@@ -184,25 +184,25 @@ this.FeatureBackground();
  testRunner.And("the user is logged as \'amanda.fields@mail.com\' with password \'amandafields\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
- testRunner.And("the user clicks Continue in Billing Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the user clicks Continue in \'billing\' Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
  testRunner.And("the user selects In-Store Pickup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
- testRunner.And("the user clicks Continue in Shipping Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the user clicks Continue in \'shipping\' Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
- testRunner.And("the user clicks Continue in Payment Method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the user clicks Continue in \'payment-method\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
- testRunner.And("the user clicks Continue in Payment Information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the user clicks Continue in \'payment-info\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 28
- testRunner.And("the user confirms order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the user clicks in \'confirm-order\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 29
- testRunner.Then("the user gets the message an Order number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the user gets the message with an Order number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

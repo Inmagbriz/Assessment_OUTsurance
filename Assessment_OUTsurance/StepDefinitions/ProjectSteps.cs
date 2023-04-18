@@ -126,16 +126,14 @@ namespace Assessment_OUTsurance.Steps
             }
         }
 
-        [When(@"the user clicks Continue in Billing Address")]
-        [When(@"the user clicks Continue in Shipping Address")]
-        [When(@"the user clicks Continue in Payment Method")]
-        [When(@"the user clicks Continue in Payment Information")]
-        [When(@"the user confirms order")]
-        public void WhenTheUserClicksContinue()
+        [When(@"the user clicks Continue in '(.*)' Address")]
+        [When(@"the user clicks Continue in '(.*)'")]
+        [When(@"the user clicks in '(.*)'")]
+        public void WhenTheUserClicksContinueInAddress(string section)
         {
-            if (!ClickNextButton())
+            if (!ClickNextButtonInSection(section))
             {
-                Assert.Inconclusive("The Continue/Confirm button is not present");
+                Assert.Inconclusive($"The Continue/Confirm button is not present in {section} section");
             }
         }
 
@@ -154,8 +152,8 @@ namespace Assessment_OUTsurance.Steps
             Assert.That(UserLoggedIn(), Is.EqualTo(user), "The user has not logged in correctly");
         }
 
-        [Then(@"the user gets the message an Order number")]
-        public void ThenTheUserGetsTheMessageAnOrderNumber()
+        [Then(@"the user gets the message with an Order number")]
+        public void ThenTheUserGetsTheMessageWithAnOrderNumber()
         {
             Assert.That(GetOrderNumber(), Is.Not.Null, "No order has been created");
         }
